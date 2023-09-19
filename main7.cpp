@@ -77,21 +77,21 @@ int main()
                 cout << "1 - чтобы получить список пользователей"<< endl;
                 cout << "2 - чтобы изменить пароль пользователя"<< endl;
                 cout << "3 - чтобы добавить пользователя"<< endl;
-                ll data;
+                string data;
                 cin >> data;
-                if(data == 0)
+                if(data == "0")
                 {
                     exit = true;
                     break;
                 }
-                if(data == 1)
+                if(data == "1")
                 {
                     for(auto  i : users)
                     {
                         i.printUser();
                     }
                 }
-                if(data == 2)
+                if(data == "2")
                 {
 
                     cout << "Введите логин"<< endl;
@@ -124,7 +124,7 @@ int main()
                     users.push_back(chose1);
                     cout << "Изменения сохранены" << endl;
                 }
-                if(data == 3)
+                if(data == "3")
                 {
                     cout << "Введите логин для пользователя"<< endl;
                     str s1;
@@ -155,7 +155,7 @@ int main()
                     users.push_back(chose1);
                     cout << "Пользователь создан";
                 }
-                if(data < 0 || data > 3)
+                if(data < "0" || data > "3")
                 {
                     cout << "Данной команды нет";
                 }
@@ -172,14 +172,14 @@ int main()
                 cout << "Добро пожаловать " << chose.login << endl;
                 cout << "0 - выйти из акаунта" << endl;
                 cout << "1 - изменить пароль" << endl;
-                ll data;
+                string data;
                 cin >> data;
-                if(data == 0)
+                if(data == "0")
                 {
                     cout << "Вы вышли из системы " << chose.login << endl;
                     break;
                 }
-                if(data == 1)
+                if(data == "1")
                 {
                     cout << "Ваш старый пароль " << chose.password << endl;
                     cout << "Введите новый пароль" << endl;

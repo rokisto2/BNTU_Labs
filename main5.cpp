@@ -5,13 +5,45 @@
 
 using namespace std;
 
+ll chek(str s)
+{
+    str s1 = "";
+    for(auto i : s)
+    {
+        if(i == '-')
+        {
+            s1+=i;
+            continue;
+        }
+        if(i>='0' && i <='9' )
+        {
+            s1+=i;
+        }
+        else
+            break;
+    }
+    if(s1.size() != s.size())
+    {
+        cout << "Мы неi == '+' || i момеж разобрать строку поэтому оставили только " << s1 << endl;
+    }
+    ll num = stoi(s1);
+    return num;
+}
+
 int main()
 {
     ll n;
-
+    str s;
     cout << "Введите размер массивы" << endl;
-    cin >> n;
+    cin >> s;
+    n = chek(s);
+    if(n <= 0)
+    {
+        cout << "Ошибка";
+        return 0;
+    }
     cout <<"Введите элементы массива через пробел" << endl;
+
     vector<str> a(n);
     for(ll i = 0; i<n; i++)
     {
@@ -28,11 +60,11 @@ int main()
     }
     if(f)
     {
-        cout << "Нет";
+        cout << "Не симметричен";
     }
     else
     {
-        cout <<"Да";
+        cout <<"симметричен";
     }
     return 0;
 }

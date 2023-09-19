@@ -14,3 +14,5 @@ add_executable(main7 main7.cpp)
 
 add_executable(CMakeLists CMakeLists.txt)
 add_executable(main3 main3.cpp)
+
+add_executable(main2 main2.cpp)
