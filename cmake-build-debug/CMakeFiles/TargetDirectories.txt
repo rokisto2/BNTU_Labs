@@ -1,0 +1,9 @@
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/BNTU.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/main.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/main5.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/main6.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/main7.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/CMakeLists.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/main3.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/rokisto2/CLionProjects/BNTU/cmake-build-debug/CMakeFiles/rebuild_cache.dir
