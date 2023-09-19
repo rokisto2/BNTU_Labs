@@ -22,13 +22,29 @@ ll chek(str s)
         else
             break;
     }
+    ll num;
+    try {
+        if(s1.size() <= 0)
+        {
+            cout << "Ошибка" << endl;
+            exit(0);
+        }
+        num = stoi(s1);
+    }
+    catch(const char* e)
+    {
+        cout << "Ошибка" << endl;
+        exit(0);
+    }
     if(s1.size() != s.size())
     {
-        cout << "Мы неi == '+' || i момеж разобрать строку поэтому оставили только " << s1 << endl;
+        cout << "Мы не момеж разобрать строку поэтому оставили только " << s1 << endl;
     }
-    ll num = stoi(s1);
+
     return num;
 }
+
+
 
 int main()
 {

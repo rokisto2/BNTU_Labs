@@ -1,9 +1,15 @@
+//var 2
 #define ll long long
 #define str string
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
+ll product(vector<ll> arr, ll size) {
+    if (size == 0)
+        return 1;
+    return arr[size-1] * product(arr, size-1);
+}
 ll chek(str s)
 {
     str s1 = "";
@@ -44,30 +50,42 @@ ll chek(str s)
 }
 
 
-int main() {
-    cout << "Введите x y" << endl;
-    ll x, y;
+
+int main()
+{
+    cout << "Введите размео массива" << endl;
+    ll n;
     str s;
-    try{
+    cin >> s;
+    n = chek(s);
+    if(n<=0)
+    {
+        cout << "Ошибка" << endl;
+        return 0;
+    }
+    vector<ll> a(n);
+    cout <<"Введите элементы массива через пробел" << endl;
+    for(ll i = 0; i<n; i++)
+    {
         cin >> s;
-        x = chek(s);
-        cin >> s;
-        y = chek(s);
+        a[i] = chek(s);
+    }
+    try
+    {
+        ll ans1 = 1;
+        for(ll i = 0; i<n; i++)
+        {
+            ans1*=a[i];
+        }
+        cout << "Рассчет при цикле " << ans1 << endl;
+        ll ans2 = 1;
+        ans2 = product(a,a.size());
+        cout << "Рассчет при рекурсии " << ans2;
     }
     catch(const char* e)
     {
         cout << "Ошибка" << endl;
         return 0;
     }
-    ll z = pow(pow(x,4)+y,3 );
-    if (x > 0 && y > 0)
-    {
-         z = log(pow(x,2))+pow(pow(x,2),1.0/3);
-    }
-    if (x < 0 || y < 0)
-    {
-        z = log(pow(x,2))+pow(pow(x,2),1.0/3);
-    }
-    cout << "Вот ответ на задачу: " << z << endl;
     return 0;
 }
